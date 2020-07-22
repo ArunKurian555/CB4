@@ -1,0 +1,296 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x80000000         0x00500000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                __DYNAMIC=0x0
+                0x00400000                PROVIDE (__stack, 0x400000)
+                0x00000000                PROVIDE (hardware_init_hook, 0x0)
+                0x00000000                PROVIDE (_hardware_init_hook, 0x0)
+                0x00000000                PROVIDE (software_init_hook, 0x0)
+                0x00000000                PROVIDE (_software_init_hook, 0x0)
+
+.text           0x80000000     0x6be0
+ *(.text)
+ .text          0x80000000      0x438 S2_RGB_Serial_CH5.o
+                0x800003f2                S2_RGB_Serial_CH5_main
+                0x8000033c                S2_RGB_Serial_CH5_EventHandler
+                0x80000000                S2_RGB_Serial_CH5EventHandler00000
+ .text          0x80000438     0x5836 library.o
+                0x80004624                RotateRightLong
+                0x80004c32                IsSystem
+                0x80004588                Seed
+                0x80001e80                Remove
+                0x80004204                Ltoa
+                0x80003f30                Atoi
+                0x80003298                InitRampInfoArray
+                0x800049de                Right
+                0x80005a0e                LockInputSema
+                0x800044b2                Mod
+                0x8000469a                Getc
+                0x800043e6                SMuldiv
+                0x80004c14                IsHidden
+                0x800042ca                Min
+                0x80005822                hextosi
+                0x80004db8                WriteIntegerArray
+                0x8000532e                GetSignedIntArrayElementPtr
+                0x80003c52                CheckStructArray
+                0x80005836                hextosl
+                0x80004f3e                WriteSignedIntegerArray
+                0x8000391a                InitStringParamArray
+                0x80002bec                ReadSignedLongIntegerArray
+                0x80001b0e                GatherToDelimiter
+                0x8000373e                InitStringArray
+                0x800042a4                Max
+                0x80004c6e                IsReadOnly
+                0x800043ae                SMax
+                0x80001cb2                GatherByLength
+                0x8000413e                Chr
+                0x80004d90                ReadSignedLongInteger
+                0x800041bc                Itohex
+                0x80003bc4                GetStructArrayElement
+                0x80003eb8                UNS_SetByte
+                0x800049b2                ReverseFindi
+                0x80003094                ReadStringArray
+                0x8000513e                GetIntArrayElementPtr
+                0x800047ee                Lower
+                0x800045a4                RotateLeft
+                0x80005956                ResizeIfAutogrow
+                0x800033c4                CheckInputArray
+                0x800009a6                ResizeStringArray
+                0x800040d0                Atosl
+                0x80003ef8                High
+                0x80004554                Rnd
+                0x80004476                UMod
+                0x800045fa                RotateLeftLong
+                0x80005a82                FindNumericChar
+                0x80005586                CheckIOArrayBounds2
+                0x80004bcc                MakeProgramFilename
+                0x800043ca                SMin
+                0x80004722                Left
+                0x80004664                CheckBufferThreshold
+                0x80004d48                ReadSignedInteger
+                0x80003f22                LowWord
+                0x80000438                Bit
+                0x80004cf8                ReadLongInteger
+                0x80003d36                Byte
+                0x80005236                GetLongArrayElementPtr
+                0x80004984                ReverseFind
+                0x80004be2                GetSeries
+                0x80005b4e                InitTcpServer
+                0x800047d6                Len
+                0x80005656                InitializeRampInfoInternal
+                0x800042f0                Divide
+                0x8000403c                Atol
+                0x80004bd8                GetModelNumber
+                0x8000551e                CheckIOArrayBounds
+                0x8000341e                CheckStringInputArray
+                0x80005000                WriteSignedLongIntegerArray
+                0x80003b0e                GetStringArrayElement
+                0x80004248                Ltohex
+                0x80004174                Itoa
+                0x800045ce                RotateRight
+                0x8000216e                InternalReverseFind
+                0x80004cd8                WriteLongInteger
+                0x80003642                InitDynamicStringStruct
+                0x80003534                SetStringArray
+                0x800029ca                ReadSignedIntegerArray
+                0x80003478                SetOutputArray
+                0x80004c88                WriteInteger
+                0x80003aa2                InitStructDynamicArray
+                0x800023f8                SetString
+                0x800044ee                Random
+                0x80004d20                WriteSignedInteger
+                0x8000069c                Find
+                0x80004bec                GetProgramNumber
+                0x800048c2                Mid
+                0x80005ac0                InitTcpClient
+                0x8000158a                ResizeStructArray
+                0x80005426                GetSignedLongArrayElementPtr
+                0x80005848                hextol
+                0x80002e0e                ReadString
+                0x800037d4                InitDynamicStringArray
+                0x8000592e                UpperChar
+                0x80003fcc                Atosi
+                0x80004cb0                ReadInteger
+                0x80004362                Muldiv
+                0x800034e6                SetStringOutputArray
+                0x800050c4                WriteString
+                0x80000ffe                ResizeIntegerArray
+                0x8000338c                InitInOutArray
+                0x800039e2                InitNvramStringArray
+                0x8000428c                Abs
+                0x80004432                SDivide
+                0x80002588                ReadIntegerArray
+                0x80000548                CompareStrings
+                0x80005906                LowerChar
+                0x80005bde                InitUdpSocket
+                0x8000464c                ClearBuffer
+                0x80004a9a                Upper
+                0x80003a7e                InitStructArray
+                0x80004b70                MakeLower
+                0x80004c50                IsVolume
+                0x80001fda                RemoveByLength
+                0x80003cce                CheckStringOutputArrayIndex
+                0x80004e7a                WriteLongIntegerArray
+                0x80005702                InitRampInfoStructArray
+                0x80003f14                HighWord
+                0x80000810                ResizeString
+                0x80004bf6                IsDirectory
+                0x800027a8                ReadLongIntegerArray
+                0x80003f06                Low
+                0x800019b4                Gather
+                0x80004b9e                MakeUpper
+                0x80003604                InitStringStruct
+                0x800055ee                CheckStringArrayBounds
+                0x80004334                CheckDenominator
+                0x8000580a                hextoi
+                0x80002f2c                WriteStringArray
+                0x80003df6                SetByte
+                0x800056ac                InitializeRampInfo
+                0x80005a48                UnLockInputSema
+                0x80004d70                WriteSignedLongInteger
+                0x800036f6                InitNvramStringStruct
+ *fill*         0x80005c6e        0x2
+                0x80005c70                .=ALIGN(0x10)
+ *(.eh_frame)
+                0x80005c70                .=ALIGN(0x10)
+ *(.gnu.linkonce.t.*)
+                0x80005c70                .=ALIGN(0x4)
+                0x80005c70                __CTOR_LIST__=.
+                0x80005c70                ___CTOR_LIST__=.
+                0x80005c70        0x4 LONG 0x0 (((__CTOR_END__-__CTOR_LIST__)/0x4)-0x2)
+ *(.ctors)
+                0x80005c74        0x4 LONG 0x0
+                0x80005c78                __CTOR_END__=.
+                0x80005c78                __DTOR_LIST__=.
+                0x80005c78                ___DTOR_LIST__=.
+                0x80005c78        0x4 LONG 0x0 (((__DTOR_END__-__DTOR_LIST__)/0x4)-0x2)
+ *(.dtors)
+                0x80005c7c        0x4 LONG 0x0
+                0x80005c80                __DTOR_END__=.
+ *(.rodata)
+ .rodata        0x80005c80      0x2f9 S2_RGB_Serial_CH5.o
+ .rodata        0x80005f79      0xc54 library.o
+ *(.gcc_except_table)
+ *fill*         0x80006bcd        0x1
+                0x80006bce                .=ALIGN(0x2)
+                0x80006bce                __INIT_SECTION__=.
+                0x80006bce        0x4 LONG 0x4e560000
+ *(.init)
+                0x80006bd2        0x2 SHORT 0x4e5e
+                0x80006bd4        0x2 SHORT 0x4e75
+                0x80006bd6                __FINI_SECTION__=.
+                0x80006bd6        0x4 LONG 0x4e560000
+ *(.fini)
+                0x80006bda        0x2 SHORT 0x4e5e
+                0x80006bdc        0x2 SHORT 0x4e75
+ *(.lit)
+ *fill*         0x80006bde        0x2
+                0x80006be0                .=ALIGN(0x10)
+                0x80006be0                _etext=.
+                0x80006be0                etext=.
+
+.data           0x80006be0        0x0
+                0x80006be0                copy_start=.
+ *(.shdata)
+ *(.data)
+ *(.gnu.linkonce.d.*)
+                0x80006be0                .=ALIGN(0x10)
+                0x80006be0                _edata=.
+                0x80006be0                copy_end=.
+
+.got
+ *(.got.plt)
+ *(.got)
+
+EntryList       0x80006be0      0x110
+ *(EntryList)
+ EntryList      0x80006be0      0x110 S2_RGB_Serial_CH5.o
+                0x80006be0                S2_RGB_Serial_CH5_Entry
+                0x80006cf0                .=ALIGN(0x4)
+
+FunctionList    0x80006cf0        0x4
+ *(FunctionList)
+ FunctionList   0x80006cf0        0x4 globals.o
+                0x80006cf0                g_pFunctions
+                0x80006cf4                .=ALIGN(0x4)
+
+.bss            0x80006cf4        0x0
+                0x80006cf4                .=ALIGN(0x4)
+                0x80006cf4                __bss_start=.
+ *(.shbss)
+ *(.bss)
+ *(COMMON)
+                0x80006cf8                _end=ALIGN(0x8)
+                0x80006cf8                __end=_end
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+LOAD S2_RGB_Serial_CH5.o
+LOAD globals.o
+LOAD library.o
+OUTPUT(S2_RGB_Serial_CH5.elf elf32-m68k)
+
+.comment        0x80006cf4       0x72
+ .comment       0x80006cf4       0x26 S2_RGB_Serial_CH5.o
+ .comment       0x80006d1a       0x26 globals.o
+ .comment       0x80006d40       0x26 library.o

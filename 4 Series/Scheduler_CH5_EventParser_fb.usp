@@ -1,0 +1,39 @@
+#SYMBOL_NAME "Scheduler_CH5_EventParser_fb"
+#DEFAULT_VOLATILE
+
+#help_begin
+#help_end
+
+/**** I/O Variables ****/
+STRING_INPUT IP[20][4029];
+String_output OP[20];     
+integer a,b,i,j,t,ts,tf;
+string temp[20][255];
+/**** Functions ****/
+CHANGE IP
+{
+a=0;
+for(j=1 to 10)
+{
+for(i=1 to 10)
+{
+b=a+1;
+a=Find(",",IP[j],b);
+temp[i]=MID(IP[j],b,a-b);
+}
+IF(temp[3]="0")
+{temp[3]="AM";}
+IF(temp[3]="1")
+{temp[3]="PM";}
+IF(temp[3]="2")
+{temp[3]="Sunrise";}
+IF(temp[3]="3")
+{temp[3]="Sunset";}
+t=atoi(temp[4]);
+ts=t MOD 60;
+tf=t/60;
+temp[4]=itoa(tf)+":"+itoa(ts);
+OP[j]=temp[1]+temp[2]+temp[3]+temp[4];
+}
+}
+

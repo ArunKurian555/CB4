@@ -1,0 +1,17 @@
+#SYMBOL_NAME "Digitalanychange"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Pass thorough for smooth travel
+#help_end
+
+/**** I/O Variables ****/
+Digital_input R[100];
+Digital_outPUT O;
+
+/**** Functions ****/
+Change R
+{     
+O = 1;
+O = 0;
+}

@@ -1,0 +1,17 @@
+#SYMBOL_NAME "RGB_Ch5_fb"
+#DEFAULT_VOLATILE
+
+#help_begin
+#help_end
+
+/**** I/O Variables ****/
+
+Analog_Input R,G,B;
+STRING_OUTPUT Serial;
+
+/**** Functions ****/
+
+change R,G,B
+{
+Serial= "rgb("+itoa(R)+","+itoa(G)+","+itoa(B)+")";
+}

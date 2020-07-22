@@ -1,0 +1,30 @@
+#SYMBOL_NAME "Analog - Serial Compressor Ak"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Convert Analog Levels to Serial String with "-" in between
+#help_end
+
+/**** I/O Variables ****/
+DIGITAL_INPUT Convert;
+ANALOG_INPUT Analog[200];
+
+STRING_OUTPUT Serial;
+
+/**** Functions ****/
+PUSH Convert
+
+{	
+String Command[50] , Temp[20000];
+integer i;
+for(i = 1 to 200)
+{
+if(IsSignalDefined (Analog[i]))
+{
+Command = itoa(Analog[i]);
+Temp = Temp+Command+"-";
+}
+}
+Serial = Temp;
+}
+

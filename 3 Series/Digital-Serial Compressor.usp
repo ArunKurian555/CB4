@@ -1,0 +1,40 @@
+#SYMBOL_NAME "Digital - Serial Compressor Ak"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Convert Digital to Serial String with "-" in between
+#help_end
+
+/**** I/O Variables ****/
+DIGITAL_INPUT Convert;
+DIGITAL_INPUT DIGITAL[300];
+
+STRING_OUTPUT Serial;
+
+/**** Functions ****/
+PUSH Convert
+
+{	
+String Command[50] , Temp[1000]; 
+Integer Analog[300];
+integer i;
+for(i = 1 to 300)
+{
+if(IsSignalDefined (DIGITAL[i]))
+{
+if(DIGITAL[i]=1)
+{
+Analog[i]=1;
+}
+if(DIGITAL[i]=0)
+{
+Analog[i]=0;
+}
+
+Command = itoa(Analog[i]);
+Temp = Temp+Command+"-";
+}
+}
+Serial = Temp;
+}
+

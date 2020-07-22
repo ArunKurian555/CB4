@@ -1,0 +1,25 @@
+#SYMBOL_NAME "Scheduler_CH5_fb"
+#DEFAULT_VOLATILE
+
+#help_begin
+Convert Serial String with "-" in between to Digitals  
+#help_end
+
+/**** I/O Variables ****/
+STRING_INPUT Serial[4029];
+String_output Events[20];     
+integer a,b,i,j,Analog[300],c;
+String TEMP[4029];
+/**** Functions ****/
+CHANGE Serial
+{
+a=-1;
+for(i=1 to 20)
+{
+b=a+2;
+a=Find("\x0D",Serial,b);
+Events[i]=MID(Serial,b,a-b);
+
+
+}
+}

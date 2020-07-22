@@ -1,0 +1,25 @@
+#SYMBOL_NAME "NVRAM Creator"
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+SIGNED_INTEGER nFileHandle;
+STRING_INPUT I[8192], N[8192];
+STRING sBuf[8192],fname[30];
+DIGITAL_INPUT trigger;
+
+#HELP_BEGIN
+With every high signal in Trigger the string in I gets pushed into NVRAM 
+N - Name of the file created in NVRAM
+#HELP_END
+
+push trigger
+{makestring(sBuf,"%s",I);
+makestring(fname,"\\NVRAM\\%s",N);
+StartFileOperations();
+filedelete(fname);
+nFileHandle=FileOpen(fname,_O_CREAT | _O_RDWR | _O_TEXT | _O_APPEND);
+IF (nFileHandle >= 0)
+FileWrite(nFileHandle,sBuf,8192);
+FileClose(nFileHandle);
+}

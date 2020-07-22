@@ -1,0 +1,18 @@
+#SYMBOL_NAME "LastChange"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Pass thorough for smooth travel
+#help_end
+
+/**** I/O Variables ****/
+STRING_INPUT RX[4096][120];
+STRING_OUTPUT TX;
+Digital_INPUT select[120];
+
+/**** Functions ****/
+Push select
+{     
+TX = RX[GetLastModifiedArrayIndex()];
+
+}

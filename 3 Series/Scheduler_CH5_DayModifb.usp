@@ -1,0 +1,44 @@
+
+#SYMBOL_NAME "Scheduler_CH5_daymodifier_fb"
+#DEFAULT_VOLATILE
+
+#help_begin
+Convert Serial String with "-" in between to Digitals  
+#help_end
+
+/**** I/O Variables ****/
+STRING_INPUT Serial[4029];
+String_output Events[20];     
+integer a,b,i,j,Analog[300],c;
+String TEMP[4029];
+/**** Functions ****/
+CHANGE Serial
+{
+a=-1;
+for(i=1 to 20)
+{
+b=a+2;
+a=Find("\x0D",Serial,b);
+temp=MID(Serial,b,a-b);
+c=Reversefind(",",temp);
+if(Find("X",temp,c-7) = c-7)
+setstring("S",c-7,temp);
+if(Find("X",temp,c-6) = c-6)
+setstring("M",c-6,temp);
+if(Find("X",temp,c-5) = c-5)
+setstring("T",c-5,temp);
+if(Find("X",temp,c-4) = c-4)
+setstring("W",c-4,temp);
+if(Find("X",temp,c-3) = c-3)
+setstring("T",c-3,temp);
+if(Find("X",temp,c-2) = c-2)
+setstring("F",c-2,temp);
+if(Find("X",temp,c-1) = c-1)
+setstring("S",c-1,temp);
+
+Events[i]=temp;
+
+
+
+}
+}
