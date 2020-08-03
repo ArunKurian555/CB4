@@ -8,15 +8,15 @@ Filter analog input based on digital input after .5sec
 #help_end
 
 /**** I/O Variables ****/
-string_input SerialI[120][120];
-string_output SerialO[120];         
+string_input SerialI[200][200];
+string_output SerialO[200];         
 DIGITAL_INPUT Trigger;
-DIGITAL_INPUT Convert[120];
+DIGITAL_INPUT Convert[200];
 integer i;
 /**** Functions ****/
 Push Trigger
 {
-for(i=1 to 120)
+for(i=1 to 200)
 {
 if(Convert[i]=1)
 {

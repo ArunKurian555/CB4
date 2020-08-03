@@ -32,7 +32,7 @@ namespace UserModule_SERIALSAMPLER2_0
                 
                 __context__.SourceCodeLine = 19;
                 ushort __FN_FORSTART_VAL__1 = (ushort) ( 1 ) ;
-                ushort __FN_FOREND_VAL__1 = (ushort)120; 
+                ushort __FN_FOREND_VAL__1 = (ushort)200; 
                 int __FN_FORSTEP_VAL__1 = (int)1; 
                 for ( I  = __FN_FORSTART_VAL__1; (__FN_FORSTEP_VAL__1 > 0)  ? ( (I  >= __FN_FORSTART_VAL__1) && (I  <= __FN_FOREND_VAL__1) ) : ( (I  <= __FN_FORSTART_VAL__1) && (I  >= __FN_FOREND_VAL__1) ) ; I  += (ushort)__FN_FORSTEP_VAL__1) 
                     { 
@@ -58,27 +58,29 @@ namespace UserModule_SERIALSAMPLER2_0
     
     public override void LogosSplusInitialize()
     {
+        SocketInfo __socketinfo__ = new SocketInfo( 1, this );
+        InitialParametersClass.ResolveHostName = __socketinfo__.ResolveHostName;
         _SplusNVRAM = new SplusNVRAM( this );
         
         TRIGGER = new Crestron.Logos.SplusObjects.DigitalInput( TRIGGER__DigitalInput__, this );
         m_DigitalInputList.Add( TRIGGER__DigitalInput__, TRIGGER );
         
-        CONVERT = new InOutArray<DigitalInput>( 120, this );
-        for( uint i = 0; i < 120; i++ )
+        CONVERT = new InOutArray<DigitalInput>( 200, this );
+        for( uint i = 0; i < 200; i++ )
         {
             CONVERT[i+1] = new Crestron.Logos.SplusObjects.DigitalInput( CONVERT__DigitalInput__ + i, CONVERT__DigitalInput__, this );
             m_DigitalInputList.Add( CONVERT__DigitalInput__ + i, CONVERT[i+1] );
         }
         
-        SERIALI = new InOutArray<StringInput>( 120, this );
-        for( uint i = 0; i < 120; i++ )
+        SERIALI = new InOutArray<StringInput>( 200, this );
+        for( uint i = 0; i < 200; i++ )
         {
-            SERIALI[i+1] = new Crestron.Logos.SplusObjects.StringInput( SERIALI__AnalogSerialInput__ + i, SERIALI__AnalogSerialInput__, 120, this );
+            SERIALI[i+1] = new Crestron.Logos.SplusObjects.StringInput( SERIALI__AnalogSerialInput__ + i, SERIALI__AnalogSerialInput__, 200, this );
             m_StringInputList.Add( SERIALI__AnalogSerialInput__ + i, SERIALI[i+1] );
         }
         
-        SERIALO = new InOutArray<StringOutput>( 120, this );
-        for( uint i = 0; i < 120; i++ )
+        SERIALO = new InOutArray<StringOutput>( 200, this );
+        for( uint i = 0; i < 200; i++ )
         {
             SERIALO[i+1] = new Crestron.Logos.SplusObjects.StringOutput( SERIALO__AnalogSerialOutput__ + i, this );
             m_StringOutputList.Add( SERIALO__AnalogSerialOutput__ + i, SERIALO[i+1] );
