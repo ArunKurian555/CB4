@@ -15,12 +15,12 @@ String TEMP[4029];
 CHANGE Serial
 {
 j=0;
-
 b=1;
-
-for(i = 1 to 300)
+for(i = 1 to LEN(Serial))
 {
 a=Find("-",Serial,b);
+if (a>0)
+{
 Temp=MID(Serial,b,a-b);
 Analog[i]= atoi (TEMP); 
 if(Analog[i]=1)
@@ -28,6 +28,7 @@ if(Analog[i]=1)
 j=j+1;
 }
 b=a+1;
+}
 
 if(a=0)
 break;

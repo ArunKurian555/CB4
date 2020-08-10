@@ -43,40 +43,45 @@ DEFINE_INDEPENDENT_EVENTHANDLER( S2_SerialParseCounter, 00000 /*Serial*/ )
     
     UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 17 );
     Globals->S2_SerialParseCounter.__J = 0; 
-    UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 19 );
+    UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 18 );
     Globals->S2_SerialParseCounter.__B = 1; 
-    UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 21 );
-    __FN_FOREND_VAL__1 = 300; 
+    UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 19 );
+    __FN_FOREND_VAL__1 = Len( GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __SERIAL  )  ); 
     __FN_FORINIT_VAL__1 = 1; 
     for( Globals->S2_SerialParseCounter.__I = 1; (__FN_FORINIT_VAL__1 > 0)  ? ((short)Globals->S2_SerialParseCounter.__I  <= __FN_FOREND_VAL__1 ) : ((short)Globals->S2_SerialParseCounter.__I  >= __FN_FOREND_VAL__1) ; Globals->S2_SerialParseCounter.__I  += __FN_FORINIT_VAL__1) 
         { 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 23 );
+        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 21 );
         Globals->S2_SerialParseCounter.__A = Find( LOCAL_STRING_STRUCT( __SPLS_TMPVAR__LOCALSTR_0__ )  , GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __SERIAL  )  , Globals->S2_SerialParseCounter.__B , 1 ); 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 24 );
-        FormatString ( INSTANCE_PTR( S2_SerialParseCounter ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__1 )    ,2 , "%s"  , Mid ( INSTANCE_PTR( S2_SerialParseCounter ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__ )    , GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __SERIAL  )  , Globals->S2_SerialParseCounter.__B, (Globals->S2_SerialParseCounter.__A - Globals->S2_SerialParseCounter.__B))  )  ; 
-        FormatString ( INSTANCE_PTR( S2_SerialParseCounter ) , GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __TEMP  )   ,2 , "%s"  , __FN_DST_STR__1 ) ; 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 25 );
-        SET_GLOBAL_INTARRAY_VALUE( S2_SerialParseCounter, __ANALOG, 0, Globals->S2_SerialParseCounter.__I , Atoi( GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __TEMP  )  )) ; 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 26 );
-        if ( (GET_GLOBAL_INTARRAY_VALUE( S2_SerialParseCounter, __ANALOG, 0, Globals->S2_SerialParseCounter.__I  ) == 1)) 
+        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 22 );
+        if ( (Globals->S2_SerialParseCounter.__A > 0)) 
             { 
-            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 28 );
-            Globals->S2_SerialParseCounter.__J = (Globals->S2_SerialParseCounter.__J + 1); 
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 24 );
+            FormatString ( INSTANCE_PTR( S2_SerialParseCounter ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__1 )    ,2 , "%s"  , Mid ( INSTANCE_PTR( S2_SerialParseCounter ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__ )    , GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __SERIAL  )  , Globals->S2_SerialParseCounter.__B, (Globals->S2_SerialParseCounter.__A - Globals->S2_SerialParseCounter.__B))  )  ; 
+            FormatString ( INSTANCE_PTR( S2_SerialParseCounter ) , GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __TEMP  )   ,2 , "%s"  , __FN_DST_STR__1 ) ; 
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 25 );
+            SET_GLOBAL_INTARRAY_VALUE( S2_SerialParseCounter, __ANALOG, 0, Globals->S2_SerialParseCounter.__I , Atoi( GLOBAL_STRING_STRUCT( S2_SerialParseCounter, __TEMP  )  )) ; 
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 26 );
+            if ( (GET_GLOBAL_INTARRAY_VALUE( S2_SerialParseCounter, __ANALOG, 0, Globals->S2_SerialParseCounter.__I  ) == 1)) 
+                { 
+                UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 28 );
+                Globals->S2_SerialParseCounter.__J = (Globals->S2_SerialParseCounter.__J + 1); 
+                } 
+            
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 30 );
+            Globals->S2_SerialParseCounter.__B = (Globals->S2_SerialParseCounter.__A + 1); 
             } 
         
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 30 );
-        Globals->S2_SerialParseCounter.__B = (Globals->S2_SerialParseCounter.__A + 1); 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 32 );
+        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 33 );
         if ( (Globals->S2_SerialParseCounter.__A == 0)) 
             {
-            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 33 );
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 34 );
             break ; 
             }
         
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 21 );
+        UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 19 );
         } 
     
-    UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 35 );
+    UpdateSourceCodeLine( INSTANCE_PTR( S2_SerialParseCounter ), 36 );
     SetAnalog ( INSTANCE_PTR( S2_SerialParseCounter ), __S2_SerialParseCounter_COUNT_ANALOG_OUTPUT, Globals->S2_SerialParseCounter.__J) ; 
     
     S2_SerialParseCounter_Exit__Event_0:

@@ -35,40 +35,45 @@ namespace UserModule_SERIALPARSECOUNTER
                 
                 __context__.SourceCodeLine = 17;
                 J = (ushort) ( 0 ) ; 
-                __context__.SourceCodeLine = 19;
+                __context__.SourceCodeLine = 18;
                 B = (ushort) ( 1 ) ; 
-                __context__.SourceCodeLine = 21;
+                __context__.SourceCodeLine = 19;
                 ushort __FN_FORSTART_VAL__1 = (ushort) ( 1 ) ;
-                ushort __FN_FOREND_VAL__1 = (ushort)300; 
+                ushort __FN_FOREND_VAL__1 = (ushort)Functions.Length( SERIAL ); 
                 int __FN_FORSTEP_VAL__1 = (int)1; 
                 for ( I  = __FN_FORSTART_VAL__1; (__FN_FORSTEP_VAL__1 > 0)  ? ( (I  >= __FN_FORSTART_VAL__1) && (I  <= __FN_FOREND_VAL__1) ) : ( (I  <= __FN_FORSTART_VAL__1) && (I  >= __FN_FOREND_VAL__1) ) ; I  += (ushort)__FN_FORSTEP_VAL__1) 
                     { 
-                    __context__.SourceCodeLine = 23;
+                    __context__.SourceCodeLine = 21;
                     A = (ushort) ( Functions.Find( "-" , SERIAL , B ) ) ; 
-                    __context__.SourceCodeLine = 24;
-                    TEMP  .UpdateValue ( Functions.Mid ( SERIAL ,  (int) ( B ) ,  (int) ( (A - B) ) )  ) ; 
-                    __context__.SourceCodeLine = 25;
-                    ANALOG [ I] = (ushort) ( Functions.Atoi( TEMP ) ) ; 
-                    __context__.SourceCodeLine = 26;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (ANALOG[ I ] == 1))  ) ) 
+                    __context__.SourceCodeLine = 22;
+                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt ( A > 0 ))  ) ) 
                         { 
-                        __context__.SourceCodeLine = 28;
-                        J = (ushort) ( (J + 1) ) ; 
+                        __context__.SourceCodeLine = 24;
+                        TEMP  .UpdateValue ( Functions.Mid ( SERIAL ,  (int) ( B ) ,  (int) ( (A - B) ) )  ) ; 
+                        __context__.SourceCodeLine = 25;
+                        ANALOG [ I] = (ushort) ( Functions.Atoi( TEMP ) ) ; 
+                        __context__.SourceCodeLine = 26;
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (ANALOG[ I ] == 1))  ) ) 
+                            { 
+                            __context__.SourceCodeLine = 28;
+                            J = (ushort) ( (J + 1) ) ; 
+                            } 
+                        
+                        __context__.SourceCodeLine = 30;
+                        B = (ushort) ( (A + 1) ) ; 
                         } 
                     
-                    __context__.SourceCodeLine = 30;
-                    B = (ushort) ( (A + 1) ) ; 
-                    __context__.SourceCodeLine = 32;
+                    __context__.SourceCodeLine = 33;
                     if ( Functions.TestForTrue  ( ( Functions.BoolToInt (A == 0))  ) ) 
                         {
-                        __context__.SourceCodeLine = 33;
+                        __context__.SourceCodeLine = 34;
                         break ; 
                         }
                     
-                    __context__.SourceCodeLine = 21;
+                    __context__.SourceCodeLine = 19;
                     } 
                 
-                __context__.SourceCodeLine = 35;
+                __context__.SourceCodeLine = 36;
                 COUNT  .Value = (ushort) ( J ) ; 
                 
                 

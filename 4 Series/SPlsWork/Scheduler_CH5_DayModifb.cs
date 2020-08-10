@@ -35,7 +35,7 @@ namespace UserModule_SCHEDULER_CH5_DAYMODIFB
                 SplusExecutionContext __context__ = SplusThreadStartCode(__SignalEventArg__);
                 
                 __context__.SourceCodeLine = 17;
-                A = (ushort) ( Functions.ToInteger( -( 1 ) ) ) ; 
+                B = (ushort) ( 1 ) ; 
                 __context__.SourceCodeLine = 18;
                 ushort __FN_FORSTART_VAL__1 = (ushort) ( 1 ) ;
                 ushort __FN_FOREND_VAL__1 = (ushort)20; 
@@ -43,64 +43,69 @@ namespace UserModule_SCHEDULER_CH5_DAYMODIFB
                 for ( I  = __FN_FORSTART_VAL__1; (__FN_FORSTEP_VAL__1 > 0)  ? ( (I  >= __FN_FORSTART_VAL__1) && (I  <= __FN_FOREND_VAL__1) ) : ( (I  <= __FN_FORSTART_VAL__1) && (I  >= __FN_FOREND_VAL__1) ) ; I  += (ushort)__FN_FORSTEP_VAL__1) 
                     { 
                     __context__.SourceCodeLine = 20;
-                    B = (ushort) ( (A + 2) ) ; 
-                    __context__.SourceCodeLine = 21;
                     A = (ushort) ( Functions.Find( "\u000D" , SERIAL , B ) ) ; 
-                    __context__.SourceCodeLine = 22;
-                    TEMP  .UpdateValue ( Functions.Mid ( SERIAL ,  (int) ( B ) ,  (int) ( (A - B) ) )  ) ; 
-                    __context__.SourceCodeLine = 23;
-                    C = (ushort) ( Functions.ReverseFind( "," , TEMP ) ) ; 
-                    __context__.SourceCodeLine = 24;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 7) ) == (C - 7)))  ) ) 
-                        {
+                    __context__.SourceCodeLine = 21;
+                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (A != 0))  ) ) 
+                        { 
+                        __context__.SourceCodeLine = 23;
+                        TEMP  .UpdateValue ( Functions.Mid ( SERIAL ,  (int) ( B ) ,  (int) ( (A - B) ) )  ) ; 
+                        __context__.SourceCodeLine = 24;
+                        C = (ushort) ( Functions.ReverseFind( "," , TEMP ) ) ; 
                         __context__.SourceCodeLine = 25;
-                        SetString ( "S" , (int)(C - 7), TEMP ) ; 
-                        }
-                    
-                    __context__.SourceCodeLine = 26;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 6) ) == (C - 6)))  ) ) 
-                        {
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 7) ) == (C - 7)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 26;
+                            SetString ( "S" , (int)(C - 7), TEMP ) ; 
+                            }
+                        
                         __context__.SourceCodeLine = 27;
-                        SetString ( "M" , (int)(C - 6), TEMP ) ; 
-                        }
-                    
-                    __context__.SourceCodeLine = 28;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 5) ) == (C - 5)))  ) ) 
-                        {
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 6) ) == (C - 6)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 28;
+                            SetString ( "M" , (int)(C - 6), TEMP ) ; 
+                            }
+                        
                         __context__.SourceCodeLine = 29;
-                        SetString ( "T" , (int)(C - 5), TEMP ) ; 
-                        }
-                    
-                    __context__.SourceCodeLine = 30;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 4) ) == (C - 4)))  ) ) 
-                        {
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 5) ) == (C - 5)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 30;
+                            SetString ( "T" , (int)(C - 5), TEMP ) ; 
+                            }
+                        
                         __context__.SourceCodeLine = 31;
-                        SetString ( "W" , (int)(C - 4), TEMP ) ; 
-                        }
-                    
-                    __context__.SourceCodeLine = 32;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 3) ) == (C - 3)))  ) ) 
-                        {
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 4) ) == (C - 4)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 32;
+                            SetString ( "W" , (int)(C - 4), TEMP ) ; 
+                            }
+                        
                         __context__.SourceCodeLine = 33;
-                        SetString ( "T" , (int)(C - 3), TEMP ) ; 
-                        }
-                    
-                    __context__.SourceCodeLine = 34;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 2) ) == (C - 2)))  ) ) 
-                        {
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 3) ) == (C - 3)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 34;
+                            SetString ( "T" , (int)(C - 3), TEMP ) ; 
+                            }
+                        
                         __context__.SourceCodeLine = 35;
-                        SetString ( "F" , (int)(C - 2), TEMP ) ; 
-                        }
-                    
-                    __context__.SourceCodeLine = 36;
-                    if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 1) ) == (C - 1)))  ) ) 
-                        {
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 2) ) == (C - 2)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 36;
+                            SetString ( "F" , (int)(C - 2), TEMP ) ; 
+                            }
+                        
                         __context__.SourceCodeLine = 37;
-                        SetString ( "S" , (int)(C - 1), TEMP ) ; 
-                        }
+                        if ( Functions.TestForTrue  ( ( Functions.BoolToInt (Functions.Find( "X" , TEMP , (C - 1) ) == (C - 1)))  ) ) 
+                            {
+                            __context__.SourceCodeLine = 38;
+                            SetString ( "S" , (int)(C - 1), TEMP ) ; 
+                            }
+                        
+                        __context__.SourceCodeLine = 39;
+                        EVENTS [ I]  .UpdateValue ( TEMP  ) ; 
+                        __context__.SourceCodeLine = 40;
+                        B = (ushort) ( (A + 2) ) ; 
+                        } 
                     
-                    __context__.SourceCodeLine = 39;
-                    EVENTS [ I]  .UpdateValue ( TEMP  ) ; 
                     __context__.SourceCodeLine = 18;
                     } 
                 

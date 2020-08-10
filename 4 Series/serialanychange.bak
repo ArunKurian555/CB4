@@ -1,0 +1,17 @@
+#SYMBOL_NAME "Serialanychange"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Pass thorough for smooth travel
+#help_end
+
+/**** I/O Variables ****/
+String_input R[100][100];
+Digital_outPUT O;
+
+/**** Functions ****/
+Change R
+{     
+O = 1;
+O = 0;
+}

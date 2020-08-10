@@ -14,11 +14,12 @@ String TEMP[4029];
 /**** Functions ****/
 CHANGE Serial
 {
-a=-1;
+b=1;
 for(i=1 to 20)
 {
-b=a+2;
 a=Find("\x0D",Serial,b);
+if (a!= 0)
+{
 temp=MID(Serial,b,a-b);
 c=Reversefind(",",temp);
 if(Find("X",temp,c-7) = c-7)
@@ -35,10 +36,10 @@ if(Find("X",temp,c-2) = c-2)
 setstring("F",c-2,temp);
 if(Find("X",temp,c-1) = c-1)
 setstring("S",c-1,temp);
-
 Events[i]=temp;
+b=a+2;
 
 
-
+}
 }
 }

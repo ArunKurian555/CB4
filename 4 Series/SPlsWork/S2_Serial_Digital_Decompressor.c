@@ -41,44 +41,49 @@ DEFINE_INDEPENDENT_EVENTHANDLER( S2_Serial_Digital_Decompressor, 00000 /*Serial*
     /* End local function variable declarations */
     
     
-    UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 16 );
-    Globals->S2_Serial_Digital_Decompressor.__B = 1; 
     UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 17 );
-    __FN_FOREND_VAL__1 = 300; 
+    Globals->S2_Serial_Digital_Decompressor.__B = 1; 
+    UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 18 );
+    __FN_FOREND_VAL__1 = Len( GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __SERIAL  )  ); 
     __FN_FORINIT_VAL__1 = 1; 
     for( Globals->S2_Serial_Digital_Decompressor.__I = 1; (__FN_FORINIT_VAL__1 > 0)  ? ((short)Globals->S2_Serial_Digital_Decompressor.__I  <= __FN_FOREND_VAL__1 ) : ((short)Globals->S2_Serial_Digital_Decompressor.__I  >= __FN_FOREND_VAL__1) ; Globals->S2_Serial_Digital_Decompressor.__I  += __FN_FORINIT_VAL__1) 
         { 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 19 );
-        Globals->S2_Serial_Digital_Decompressor.__A = Find( LOCAL_STRING_STRUCT( __SPLS_TMPVAR__LOCALSTR_0__ )  , GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __SERIAL  )  , Globals->S2_Serial_Digital_Decompressor.__B , 1 ); 
         UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 20 );
-        FormatString ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__1 )    ,2 , "%s"  , Mid ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__ )    , GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __SERIAL  )  , Globals->S2_Serial_Digital_Decompressor.__B, (Globals->S2_Serial_Digital_Decompressor.__A - Globals->S2_Serial_Digital_Decompressor.__B))  )  ; 
-        FormatString ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ) , GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __TEMP  )   ,2 , "%s"  , __FN_DST_STR__1 ) ; 
+        Globals->S2_Serial_Digital_Decompressor.__A = Find( LOCAL_STRING_STRUCT( __SPLS_TMPVAR__LOCALSTR_0__ )  , GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __SERIAL  )  , Globals->S2_Serial_Digital_Decompressor.__B , 1 ); 
         UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 21 );
-        SET_GLOBAL_INTARRAY_VALUE( S2_Serial_Digital_Decompressor, __ANALOG, 0, Globals->S2_Serial_Digital_Decompressor.__I , Atoi( GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __TEMP  )  )) ; 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 22 );
-        if ( (GET_GLOBAL_INTARRAY_VALUE( S2_Serial_Digital_Decompressor, __ANALOG, 0, Globals->S2_Serial_Digital_Decompressor.__I  ) == 1)) 
+        if ( (Globals->S2_Serial_Digital_Decompressor.__A != 0)) 
             { 
             UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 23 );
-            SetOutputArrayElement ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), &Globals->S2_Serial_Digital_Decompressor.__DIGITAL ,Globals->S2_Serial_Digital_Decompressor.__I, 1) ; 
-            } 
-        
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 24 );
-        if ( (GET_GLOBAL_INTARRAY_VALUE( S2_Serial_Digital_Decompressor, __ANALOG, 0, Globals->S2_Serial_Digital_Decompressor.__I  ) == 0)) 
-            { 
+            FormatString ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__1 )    ,2 , "%s"  , Mid ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ) ,  LOCAL_STRING_STRUCT( __FN_DST_STR__ )    , GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __SERIAL  )  , Globals->S2_Serial_Digital_Decompressor.__B, (Globals->S2_Serial_Digital_Decompressor.__A - Globals->S2_Serial_Digital_Decompressor.__B))  )  ; 
+            FormatString ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ) , GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __TEMP  )   ,2 , "%s"  , __FN_DST_STR__1 ) ; 
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 24 );
+            SET_GLOBAL_INTARRAY_VALUE( S2_Serial_Digital_Decompressor, __ANALOG, 0, Globals->S2_Serial_Digital_Decompressor.__I , Atoi( GLOBAL_STRING_STRUCT( S2_Serial_Digital_Decompressor, __TEMP  )  )) ; 
             UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 25 );
-            SetOutputArrayElement ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), &Globals->S2_Serial_Digital_Decompressor.__DIGITAL ,Globals->S2_Serial_Digital_Decompressor.__I, 0) ; 
+            if ( (GET_GLOBAL_INTARRAY_VALUE( S2_Serial_Digital_Decompressor, __ANALOG, 0, Globals->S2_Serial_Digital_Decompressor.__I  ) == 1)) 
+                { 
+                UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 26 );
+                SetOutputArrayElement ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), &Globals->S2_Serial_Digital_Decompressor.__DIGITAL ,Globals->S2_Serial_Digital_Decompressor.__I, 1) ; 
+                } 
+            
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 27 );
+            if ( (GET_GLOBAL_INTARRAY_VALUE( S2_Serial_Digital_Decompressor, __ANALOG, 0, Globals->S2_Serial_Digital_Decompressor.__I  ) == 0)) 
+                { 
+                UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 28 );
+                SetOutputArrayElement ( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), &Globals->S2_Serial_Digital_Decompressor.__DIGITAL ,Globals->S2_Serial_Digital_Decompressor.__I, 0) ; 
+                } 
+            
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 29 );
+            Globals->S2_Serial_Digital_Decompressor.__B = (Globals->S2_Serial_Digital_Decompressor.__A + 1); 
+            UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 30 );
+            if ( (Globals->S2_Serial_Digital_Decompressor.__A == 0)) 
+                {
+                UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 31 );
+                break ; 
+                }
+            
             } 
         
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 26 );
-        Globals->S2_Serial_Digital_Decompressor.__B = (Globals->S2_Serial_Digital_Decompressor.__A + 1); 
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 27 );
-        if ( (Globals->S2_Serial_Digital_Decompressor.__A == 0)) 
-            {
-            UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 28 );
-            break ; 
-            }
-        
-        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 17 );
+        UpdateSourceCodeLine( INSTANCE_PTR( S2_Serial_Digital_Decompressor ), 18 );
         } 
     
     
