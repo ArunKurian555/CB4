@@ -1,0 +1,27 @@
+#SYMBOL_NAME "Serial - Digital for 200 Selector Ak"
+#DEFAULT_VOLATILE
+
+#help_begin
+Convert Serial String number to that number of Digitals Max 200  
+#help_end
+
+/**** I/O Variables ****/
+STRING_INPUT Serial[4029];
+DIGITAL_INPUT Convert;
+DIGITAL_OUTPUT DIGITAL[200];
+integer i,No;
+
+/**** Functions ****/
+PUSH convert
+{
+No=atoi(Serial);
+No = No+1;
+for(i = 1 to No)
+{
+DIGITAL[i]=1;
+}
+for(i = No to 200)
+{
+DIGITAL[i]=0;
+}
+}

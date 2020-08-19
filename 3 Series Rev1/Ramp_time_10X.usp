@@ -1,0 +1,18 @@
+#SYMBOL_NAME "100X Multiple"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Output analog will be 10X input analog
+#help_end
+
+/**** I/O Variables ****/
+String_INPUT AnalogI[10];
+ANALOG_OUTPUT AnalogO;             
+/**** Functions ****/
+CHANGE AnalogI
+{	
+integer temp;
+temp=atoI(AnalogI);
+AnalogO= 100 * (temp);
+}
+
