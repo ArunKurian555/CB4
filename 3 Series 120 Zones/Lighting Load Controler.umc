@@ -1,0 +1,187 @@
+[
+Version=1
+]
+[
+ObjTp=FSgntr
+Sgntr=UserMacro
+RelVrs=4.09.04
+IntStrVrs=2
+MinSMWVrs=2.05.04
+
+MinTIOVrs=0
+SavedBy=SMW4.03.24
+]
+[
+ObjTp=Hd
+S0Nd=1
+S1Nd=2
+SLNd=3
+PrNm=Lighting Load Controler.umc
+DbVr=69.05.006.00
+DvcDbVr=95.05.002.00
+PgmNm=Mark Kohlmann
+DlrNm=Chief Integrations
+CltNm=CI Lighting Load Control Harvest Open-Loop
+Incl=362,378,380,405,407,408,409,478,522,537,554,586,590,611,624,767,830,883,1032,1062,1079,1134,1157,1199,1220,1222,1299,1348,1439,1472,1473,1499,1746,1803,1975,2229,2354,2514,2523,2532,3708,3902,3912,3918,3925,1766,2574,2651,2817,2886,2938,2947,3181,3197,3233,3710,3735,3736,3816,3888,4176,4308,4476,4591,4769,5360,5388,
+McNm=Lighting Load Controler
+SmVr=1066
+DvVr=1066
+TpN1=1
+TpN2=2
+TpN3=3
+TpN4=4
+TpN5=5
+APg=1
+FltTmp=1
+FpCS=0
+EnType=0
+ZeroOnIoOk=0
+SGMethod=1
+]
+[
+ObjTp=Bk
+Nm1=\
+Sx1=0
+Sy1=0
+Mx1=0
+]
+[
+ObjTp=Bw
+H=1
+Lx=0
+Ly=0
+Rx=1294
+Ry=304
+Xm=-1
+Ym=-1
+SH=18
+Z=100
+Ht=3
+Hi=2
+]
+[
+ObjTp=Bw
+H=1
+Lx=0
+Ly=304
+Rx=1294
+Ry=608
+Xm=-1
+Ym=-1
+SH=6
+Z=100
+Ht=3
+Hi=1
+]
+[
+ObjTp=Bw
+H=1
+Lx=0
+Ly=608
+Rx=1294
+Ry=912
+Xm=-1
+Ym=-1
+SH=9
+Z=100
+Ht=3
+Hi=2
+]
+[
+ObjTp=Symbol
+Name=Lighting Load Controler
+Code=1
+SmplCName=Lighting Load Controler.umc
+Smpl-C=3
+CompilerTimePrecision=Single_Or_Double_Precision
+Exclusions=1,19,20,21,88,89,167,168,179,216,225,248,249,266,302,305,
+Hint=CI Lighting Load Control Harvest Open-Loop
+SMWRev=2.07.04
+TIORev=0
+HelpID=1055
+APg=1
+StdCmd=0
+FltTmp=1
+FpCS=0
+NumFixedInputs=12
+NumFixedOutputs=12
+NumFixedParams=8
+MinVariableInputs=0
+MinVariableInputsList2=0
+MinVariableInputsList3=0
+MinVariableOutputs=0
+MinVariableOutputsList2=0
+MinVariableOutputsList3=0
+MinVariableParams=0
+SymbolTree=6
+InputSigType1=Digital
+InputSigType2=Digital
+InputSigType3=Digital
+InputSigType4=Digital|Analog|Serial|String
+InputSigType5=Digital
+InputSigType6=Digital
+InputSigType7=Digital|Analog|Serial|String
+InputSigType8=Digital
+OutputSigType1=Digital|Analog|Serial|String
+OutputSigType2=Digital
+OutputSigType3=Digital
+OutputSigType4=Digital|Analog|Serial|String
+OutputSigType5=Analog
+OutputSigType6=Digital|Analog|Serial|String
+OutputSigType7=Digital|Analog|Serial|String
+OutputSigType8=Digital
+ParamSigType1=Time|Constant
+ParamSigType2=Time|Constant
+ParamSigType3=Percent|Constant
+ParamSigType4=Percent|Constant
+ParamSigType5=Percent|Constant
+ParamSigType6=Percent|Constant
+ParamSigType7=Percent|Constant
+ParamSigType8=Percent|Constant
+InputCue1=[Toggle]
+InputCue2=[On]
+InputCue3=[Off]
+InputCue4=[~UNUSED~]
+InputCue5=[Raise]
+InputCue6=[Lower]
+InputCue7=[~UNUSED~]
+InputCue8=[Scene1]
+InputCue9=[Scene2]
+InputCue10=[Scene3]
+InputCue11=[Scene4]
+InputCue12=[Scene5]
+OutputCue1=[~UNUSED~]
+OutputCue2=[On_f]
+OutputCue3=[Off_f]
+OutputCue4=[~UNUSED~]
+OutputCue5=Load/#
+OutputCue6=[~UNUSED~]
+OutputCue7=[~UNUSED~]
+OutputCue8=[Scene1_f]
+OutputCue9=[Scene2_f]
+OutputCue10=[Scene3_f]
+OutputCue11=[Scene4_f]
+OutputCue12=[Scene5_f]
+ParamCue1=Ramp Time
+ParamCue2=Scene Fade Time
+ParamCue3=On Level
+ParamCue4=Scene1 Level
+ParamCue5=Scene2 Level
+ParamCue6=Scene3 Level
+ParamCue7=Scene4 Level
+ParamCue8=Scene5 Level
+MPp=8
+Pp1=1
+Pp2=8
+Pp3=2
+Pp4=3
+Pp5=4
+Pp6=5
+Pp7=6
+Pp8=7
+FileName=Lighting Load Controler.umc
+EncodingType=0
+ZeroOnIoOk=0
+]
+FeSchVr=001
+¶¬ÊäæÒŞÜzbº¶ÄÔ¨àzŒ¦ÎÜèä¦ÎÜèäzªæÊäšÂÆäŞ¤ÊØ¬äæzh\`r\`h’Üè¦èä¬äæzdšÒÜ¦š®¬äæzd\`n\`hšÒÜ¨’¬äæz`¦ÂìÊÈ„òz¦š®h\`f\dhº¶ÄÔ¨àzÈ¦`œÈzb¦bœÈzd¦˜œÈzf äœÚz˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØÊä\êÚÆˆÄ¬äzlr\`j\<d:`>l\<d:`>ˆìÆˆÄ¬äzrj\`j\<d:`>d\<d:`> ÎÚœÚzšÂäÖ@–ŞĞØÚÂ<d:Ü>ˆØäœÚz†ĞÒÊÌ@’ÜèÊÎäÂèÒŞÜæ†ØèœÚz†’@˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØ@ÂäìÊæè@àÊÜZ˜<d:Ş>à’ÜÆØzfldXfnpXfp`Xh`jXh`nXh`pXh`rXhnpXj<d:d>XjfnX<d:j>hXjplXjr`Xl<d:b>XldhXnlnXpf`X<d:p>fXb`fdXb`ldXb`nrX<d:b>fhX<d:b>jnX<d:b><d:r>Xb<d:d>`Xb<f:d>Xbd<d:r>XbfhpXbhfrXbhndXbhnfXbh<d:r>XbnhlXbp`fXbrnjX<f:d>rXdfjhXdjbhXdjdfXdjfdXfn`pXfr`dXfrbdXfrbpXfrdjXbn<d:l>XdjnhXdljbXdpbnXd<d:p>lXdrfpXdrhnXfbpbXfbrnXfd<d:f>Xfnb`XfnfjXfnflXfpblXf<f:p>XhbnlXhf`pX<d:h>nlXhjrbXhnlrXjfl`Xjf<d:p>XšÆœÚz˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØÊä¦Ú¬äzb`<d:l>ˆì¬äzb`<d:l>¨àœbzb¨àœdzd¨àœfzf¨àœhzh¨àœjzj‚ ÎzbŒØè¨ÚàzbŒà†¦z`ŠÜ¨òàÊz`´ÊäŞÜ’ŞÖz`¦šÊèĞŞÈzbº¶ÄÔ¨àz„ÖœÚbz¸¦ğbz`¦òbz`šğbz`º¶ÄÔ¨àz„îzb˜ğz`˜òz`¤ğzbdrh¤òzf`h°ÚzZb²ÚzZbT  TààTÂÖTààTŠ  T¦zbp´zb<d:`>èzfÒzdº¶ÄÔ¨àz„îzb˜ğz`˜òzf`h¤ğzbdrh¤òzl`p°ÚzZb²ÚzZb¦zl´zb<d:`>èzfÒzbº¶ÄÔ¨àz„îzb˜ğz`˜òzl`p¤ğzbdrh¤òzrbd°ÚzZb²ÚzZb¦zr´zb<d:`>èzfÒzdº¶ÄÔ¨àz¦òÚÄŞØœÂÚÊz˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØÊä†ŞÈÊzb¦ÚàØ†œÂÚÊz˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØÊä\êÚÆ¦ÚàØZ†zf†ŞÚàÒØÊä¨ÒÚÊ äÊÆÒæÒŞÜz¦ÒÜÎØÊ¾ä¾ˆŞêÄØÊ¾ äÊÆÒæÒŞÜŠğÆØêæÒŞÜæzbXbrXd`XdbX<d:p>XprXblnXblpXbnrXdblX<d:d>jXdhpXdhrXd<d:l>Xf`dXf`jXÒÜèz†’@˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØ@ÂäìÊæè@àÊÜZ˜<d:Ş>à¦š®¤Êìzd\`n\`h¨’¤Êìz`ÊØà’ˆzb`<d:j>‚ Îzb¦èÈ†ÚÈz`ŒØè¨ÚàzbŒà†¦z`œêÚŒÒğÊÈ’ÜàêèæzbdœêÚŒÒğÊÈêèàêèæzbdœêÚŒÒğÊÈ ÂäÂÚæzpšÒÜ¬ÂäÒÂÄØÊ’Üàêèæz`šÒÜ¬ÂäÒÂÄØÊ’Üàêèæ˜Òæèdz`šÒÜ¬ÂäÒÂÄØÊ’Üàêèæ˜Òæèfz`šÒÜ¬ÂäÒÂÄØÊêèàêèæz`šÒÜ¬ÂäÒÂÄØÊêèàêèæ˜Òæèdz`šÒÜ¬ÂäÒÂÄØÊêèàêèæ˜Òæèfz`šÒÜ¬ÂäÒÂÄØÊ ÂäÂÚæz`¦òÚÄŞØ¨ä<d:Ê>zl’Üàêè¦ÒÎ¨òàÊbzˆÒÎÒèÂØ’Üàêè¦ÒÎ¨òàÊdzˆÒÎÒèÂØ’Üàêè¦ÒÎ¨òàÊfzˆÒÎÒèÂØ’Üàêè¦ÒÎ¨òàÊhzˆÒÎÒèÂØø‚ÜÂØŞÎø¦ÊäÒÂØø¦èäÒÜÎ’Üàêè¦ÒÎ¨òàÊjzˆÒÎÒèÂØ’Üàêè¦ÒÎ¨òàÊlzˆÒÎÒèÂØ’Üàêè¦ÒÎ¨òàÊnzˆÒÎÒèÂØø‚ÜÂØŞÎø¦ÊäÒÂØø¦èäÒÜÎ’Üàêè¦ÒÎ¨òàÊpzˆÒÎÒèÂØêèàêè¦ÒÎ¨òàÊbzˆÒÎÒèÂØø‚ÜÂØŞÎø¦ÊäÒÂØø¦èäÒÜÎêèàêè¦ÒÎ¨òàÊdzˆÒÎÒèÂØêèàêè¦ÒÎ¨òàÊfzˆÒÎÒèÂØêèàêè¦ÒÎ¨òàÊhzˆÒÎÒèÂØø‚ÜÂØŞÎø¦ÊäÒÂØø¦èäÒÜÎêèàêè¦ÒÎ¨òàÊjz‚ÜÂØŞÎêèàêè¦ÒÎ¨òàÊlzˆÒÎÒèÂØø‚ÜÂØŞÎø¦ÊäÒÂØø¦èäÒÜÎêèàêè¦ÒÎ¨òàÊnzˆÒÎÒèÂØø‚ÜÂØŞÎø¦ÊäÒÂØø¦èäÒÜÎêèàêè¦ÒÎ¨òàÊpzˆÒÎÒèÂØ ÂäÂÚ¦ÒÎ¨òàÊbz¨ÒÚÊø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊdz¨ÒÚÊø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊfz ÊäÆÊÜèø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊhz ÊäÆÊÜèø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊjz ÊäÆÊÜèø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊlz ÊäÆÊÜèø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊnz ÊäÆÊÜèø†ŞÜæèÂÜè ÂäÂÚ¦ÒÎ¨òàÊpz ÊäÆÊÜèø†ŞÜæèÂÜè’Üàêè†êÊbz¶¨Ş<d:Î>ØÊº’Üàêè†êÊdz¶Üº’Üàêè†êÊfz¶<d:Ì>º’Üàêè†êÊhz¶üªœª¦Šˆüº’Üàêè†êÊjz¶¤ÂÒæÊº’Üàêè†êÊlz¶˜ŞîÊäº’Üàêè†êÊnz¶üªœª¦Šˆüº’Üàêè†êÊpz¶¦ÆÊÜÊbº’Üàêè†êÊrz¶¦ÆÊÜÊdº’Üàêè†êÊb`z¶¦ÆÊÜÊfº’Üàêè†êÊ<d:b>z¶¦ÆÊÜÊhº’Üàêè†êÊbdz¶¦ÆÊÜÊjºêèàêè†êÊbz¶üªœª¦Šˆüºêèàêè†êÊdz¶Ü¾Ìºêèàêè†êÊfz¶<d:Ì>¾Ìºêèàêè†êÊhz¶üªœª¦Šˆüºêèàêè†êÊjz˜ŞÂÈ^Fêèàêè†êÊlz¶üªœª¦Šˆüºêèàêè†êÊnz¶üªœª¦Šˆüºêèàêè†êÊpz¶¦ÆÊÜÊb¾Ìºêèàêè†êÊrz¶¦ÆÊÜÊd¾Ìºêèàêè†êÊb`z¶¦ÆÊÜÊf¾Ìºêèàêè†êÊ<d:b>z¶¦ÆÊÜÊh¾Ìºêèàêè†êÊbdz¶¦ÆÊÜÊj¾Ìº ÂäÂÚ†êÊbz¤ÂÚà@¨ÒÚÊ ÂäÂÚ†êÊdz¦ÆÊÜÊ@ŒÂÈÊ@¨ÒÚÊ ÂäÂÚ†êÊfzÜ@˜ÊìÊØ ÂäÂÚ†êÊhz¦ÆÊÜÊb@˜ÊìÊØ ÂäÂÚ†êÊjz¦ÆÊÜÊd@˜ÊìÊØ ÂäÂÚ†êÊlz¦ÆÊÜÊf@˜ÊìÊØ ÂäÂÚ†êÊnz¦ÆÊÜÊh@˜ÊìÊØ ÂäÂÚ†êÊpz¦ÆÊÜÊj@˜ÊìÊØš àzp àbzb àdzp àfzd àhzf àjzh àlzj ànzl àpznŒÒØÊœÂÚÊz˜ÒÎĞèÒÜÎ@˜ŞÂÈ@†ŞÜèäŞØÊä\êÚÆŠÜÆŞÈÒÜÎ¨òàÊz`´ÊäŞÜ’ŞÖz`º¶ÄÔ¨àz¦Úzb¦Ú†zbjnœÚz†ÊÜèäÂØ@†ŞÜèäŞØ@šŞÈêØÊæÄÔ¬Êäzb†ŒzdÜb’zbÜbzbÚ’zbÚzbèzbÚ zb bzº¶ÄÔ¨àz¦Úzd¦Ú†zbjnœÚzœÊèîŞäÖ@šŞÈêØÊæÄÔ¬Êäzb†ŒzdÜb’zbÜbzbÚ’zbÚzbèzbÚ zb bzº¶ÄÔ¨àz¦Úzf¦Ú†zbjnœÚzŠèĞÊäÜÊèÄÔ¬Êäzb†ŒzdÜb’zbÜbzbÚ’zbÚzbèzbÚ zb bzº¶ÄÔ¨àz¦Úzh¦Ú†zbjlœÚz˜ŞÎÒÆÄÔ¬Êäzb†ŒzdÚ†zd†bzbj†dznº¶ÄÔ¨àz¦Úzj¦Ú†zbjnœÚzˆÊÌÒÜÊ‚äÎêÚÊÜèæÄÔ¬Êäzb†ŒzdÜb’zbÜbzbÚ†zb†bzlÚ’zbÚzbèzbÚ zb bzº¶ÄÔ¨àz¦Úzl¦Ú†z<d:j>œÚz‚äÎêÚÊÜè@ˆÊÌÒÜÒèÒŞÜÄÔ¬Êäzb äzj†ŒzdÜb’zbdÜbzbdÚ’zbd’bzj’dzbl’fz<d:b>’hzbf’jzbh’lzbj’nzbf’pzfb’rzfd’b`z<d:f>’<d:b>zfh’bdzfjÚzbdèzbdbzbfdzrfzbdhzbfjzdplzbfnzbfpzd`rzhfb`z<d:h><d:b>zhjbdzhlÚ zp bz¤ÂÚà@¨ÒÚÊ dz¦ÆÊÜÊ@ŒÂÈÊ@¨ÒÚÊ fzÜ@˜ÊìÊØ hz¦ÆÊÜÊb@˜ÊìÊØ jz¦ÆÊÜÊd@˜ÊìÊØ lz¦ÆÊÜÊf@˜ÊìÊØ nz¦ÆÊÜÊh@˜ÊìÊØ pz¦ÆÊÜÊj@˜ÊìÊØš àzp àbzb àdzp àfzd àhzf àjzh àlzj ànzl àpznº¶ÄÔ¨àz¦Úzn¦Ú†zbjlœÚz¦ª„¦²¦¨ŠšÄÔ¬Êäzb äzh†Œzd†ÚÜbz˜ŞÂÈ<d:¸>Ú†zp†bzr†dzd`†fzbp†hzbr†jzb`†lz<d:b>†nz<d:d>†pzdnº¶ÄÔ¨àz¦Úzr¦Ú†zfdœÚz‚ÜÂØŞÎ@’ÜÒèÒÂØÒôÊÄÔ¬Êäzb äzn†ŒzdÜb’znÜbzb†ÚÜbz¦ÆÊÜÊæ<d:¸>Ú’zn’bzl’dzfl’fzfn’hzfp’jzfr’lzh`’nzdhÚzbèzbbz<d:d>Ú zn bzFÜ@˜ÊìÊØ dzF¦ÆÊÜÊb@˜ÊìÊØ fzF¦ÆÊÜÊd@˜ÊìÊØ hzF¦ÆÊÜÊf@˜ÊìÊØ jzF¦ÆÊÜÊh@˜ÊìÊØ lzF¦ÆÊÜÊj@˜ÊìÊØ nz`Jº¶ÄÔ¨àz¦Úzb`¦Ú†zh`rœÚz˜ŞÎÒÆ@®ÂìÊ@ êØæÊÄÔ¬Êäzb äzn†ŒzdÜb’zfÜbzd†ÚÜbz¨Ş<d:Î>ØÊ<d:¸>Ú’zf’bznÚzdèzdbzdbÚ zb bzbÈº¶ÄÔ¨àz¦Úz<d:b>¦Ú†zd`œÚz„ê<d:Ì>ÊäÄÔ¬Êäzb äzn†ŒzdÜb’zfÜbzdÚ’zf’bzdb’dzf`’fzdrÚzdèzdbzldzdhº¶ÄÔ¨àz¦Úzbj¦Ú†zbjlœÚz¦ª„¦²¦¨ŠšÄÔ¬Êäzb äzh†Œzd†ÚÜbz†Ş<d:Ú>ŞÜÚ†zd†bzbl†dzbnº¶ÄÔ¨àz¦Úzbl¦Ú†zd`œÚz„ê<d:Ì>ÊäÄÔ¬Êäzb äzbj†ŒzdÜb’zbpÜbzbn†ÚÜbz’^æ<d:¸>Ú’zbp’bzd’dzj’fzbl’hz<d:b>’jzbh’lzbj’nzfb’pzfd’rz<d:f>’b`zfh’<d:b>zfj’bdzdr’bfzf`’bhzhn’bjzhp’blzhr’bnzj`’bpzjbÚzbnèzbnbzndzlfzdhhzb`jzbnlzflnzfnpzfprzfrb`zh`<d:b>zrbdzbdbfzd`bhzhfbjz<d:h>blzhjbnzhlº¶ÄÔ¨àz¦Úzbn¦Ú†zfdœÚz‚ÜÂØŞÎ@’ÜÒèÒÂØÒôÊÄÔ¬Êäzb äzbj†ŒzdÜb’zbÜbzbÚ’zb’bzdÚzbèzbbzbpÚ zb bz`Èº¶ÄÔ¨àz¦Úzbp¦Ú†zjh`œÚz‚ÜÂØŞÎ@¤ÂÚà@P„ŞêÜÈæ@˜ÒÚÒèÊÈRÄÔ¬Êäzb äzn†ŒzdÜb’zfÜbzbÚ’zf’bzb`’dzbnÚzbèzbbzdpÚ zh bzdæ dz`J fzb<d:`>J hz`\bJº¶ÄÔ¨àz¦Úzbr¦Ú†zhrdœÚz‚ÜÂØŞÎ@†ŞÚàÂäÒæŞÜ@PŒê<d:Ø>@¦ÊèRÄÔ¬Êäzb äzn†ŒzdÜb’zdÜbzlÚ’zd’bzdp’dzbpÚzlèzlbzf`jzdrº¶ÄÔ¨àz¦Úzd`¦Ú†z<d:l>œÚz‚ÜÂØŞÎ@¤ÂèÊ@˜ÒÚÒèÊäÄÔ¬Êäzb äzn†ŒzdÜb’zbÜbzb†ÚÜbz¦ÆÊÜÊ@ŒÂÈÊ@¨ÒÚÊ<d:¸>Ú’zb’bz<d:d>ÚzbèzbbzdpÚ zb bzF¦ÆÊÜÊ@ŒÂÈÊ@¨ÒÚÊº¶ÄÔ¨àz¦Úz<d:d>¦Ú†zfpœÚz‚ÜÂØŞÎ@ŠâêÂèÊÄÔ¬Êäzb äzn†ŒzdÜb’zdÜbzjàŒz`ÂÜÈŒzbÚ’zd’bzdpÚzjèzjbzhndzhpfzhrhzj`jzjbÚ zj bzF¦ÆÊÜÊb@˜ÊìÊØ dzF¦ÆÊÜÊd@˜ÊìÊØ fzF¦ÆÊÜÊf@˜ÊìÊØ hzF¦ÆÊÜÊh@˜ÊìÊØ jzF¦ÆÊÜÊj@˜ÊìÊØº¶ÄÔ¨àz¦Úzdn¦Ú†zbrœÚz’ÜèÊäØŞÆÖÄÔ¬Êäzb äzn†ŒzdÜb’zpÜbzlÚ’zp’bzdh’fzl’hzfl’jzfn’lzfp’nzfr’pzh`Úzlèzlbzhdzhnfzhphzhrjzj`lzjbº¶ÄÔ¨àz¦ÎzhœÚz<d:^><d:¾>ÈÒÎÒèÂØ¾äÊæÊäìÊÈ<d:¾>º¶ÄÔ¨àz¦ÎzjœÚz¶¨Ş<d:Î>ØÊºº¶ÄÔ¨àz¦ÎzlœÚz˜ŞÂÈ¾Üº¶ÄÔ¨àz¦ÎznœÚz˜ŞÂÈ¾¨Ş<d:Î>ØÊº¶ÄÔ¨àz¦ÎzrœÚz¶Ü¾Ìºº¶ÄÔ¨àz¦Îzb`œÚz˜ŞÂÈ¾¤ÂÒæÊº¶ÄÔ¨àz¦Îz<d:b>œÚz¶<d:Ì>ºº¶ÄÔ¨àz¦ÎzbdœÚz¶<d:Ì>¾Ìºº¶ÄÔ¨àz¦ÎzbfœÚz¶üªœª¦Šˆüº¦Î¨àzfbº¶ÄÔ¨àz¦ÎzbhœÚz¶¤ÂÒæÊºº¶ÄÔ¨àz¦ÎzbjœÚz¶˜ŞîÊäºº¶ÄÔ¨àz¦ÎzblœÚz¶Üºº¶ÄÔ¨àz¦ÎzbnœÚz˜ŞÂÈ¾˜ŞîÊäº¶ÄÔ¨àz¦ÎzbpœÚz‚†œ¦¨z´Š¤È¦Î¨àzdº¶ÄÔ¨àz¦Îzd`œÚz¶¦ÆÊÜÊb¾Ìºº¶ÄÔ¨àz¦ÎzdbœÚz˜ŞÂÈ¾¨Ş<d:Î>ØÊ¾Øîàº¶ÄÔ¨àz¦Îz<d:d>œÚz˜ŞÂÈ¾æÊèF¦Î¨àzdº¶ÄÔ¨àz¦ÎzdhœÚz˜ŞÂÈ¾<d:Ì>º¶ÄÔ¨àz¦ÎzdpœÚz˜ŞÂÈF¦Î¨àzdº¶ÄÔ¨àz¦ÎzdrœÚz˜ŞÂÈ¾Ü¾Ìº¶ÄÔ¨àz¦Îzf`œÚz˜ŞÂÈ¾<d:Ì>¾Ìº¶ÄÔ¨àz¦ÎzfbœÚz¶¦ÆÊÜÊbºº¶ÄÔ¨àz¦ÎzfdœÚz¶¦ÆÊÜÊdºº¶ÄÔ¨àz¦Îz<d:f>œÚz¶¦ÆÊÜÊfºº¶ÄÔ¨àz¦ÎzfhœÚz¶¦ÆÊÜÊhºº¶ÄÔ¨àz¦ÎzfjœÚz¶¦ÆÊÜÊjºº¶ÄÔ¨àz¦ÎzflœÚz˜ŞÂÈ¾¦ÆÊÜÊbº¶ÄÔ¨àz¦ÎzfnœÚz˜ŞÂÈ¾¦ÆÊÜÊdº¶ÄÔ¨àz¦ÎzfpœÚz˜ŞÂÈ¾¦ÆÊÜÊfº¶ÄÔ¨àz¦ÎzfrœÚz˜ŞÂÈ¾¦ÆÊÜÊhº¶ÄÔ¨àz¦Îzh`œÚz˜ŞÂÈ¾¦ÆÊÜÊjº¶ÄÔ¨àz¦ÎzhfœÚz¶¦ÆÊÜÊd¾Ìºº¶ÄÔ¨àz¦Îz<d:h>œÚz¶¦ÆÊÜÊf¾Ìºº¶ÄÔ¨àz¦ÎzhjœÚz¶¦ÆÊÜÊh¾Ìºº¶ÄÔ¨àz¦ÎzhlœÚz¶¦ÆÊÜÊj¾Ìºº¶ÄÔ¨àz¦ÎzhnœÚz˜ŞÂÈ¾¦ÆÊÜÊb¾Ìº¶ÄÔ¨àz¦ÎzhpœÚz˜ŞÂÈ¾¦ÆÊÜÊd¾Ìº¶ÄÔ¨àz¦ÎzhrœÚz˜ŞÂÈ¾¦ÆÊÜÊf¾Ìº¶ÄÔ¨àz¦Îzj`œÚz˜ŞÂÈ¾¦ÆÊÜÊh¾Ìº¶ÄÔ¨àz¦ÎzjbœÚz˜ŞÂÈ¾¦ÆÊÜÊj¾Ìº¶ÄÔ¨àzˆàzb¨àzbˆz¨¤ªŠˆ¬zjæœŒzhpˆœŒzblŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzd¨àzbˆz¨¤ªŠˆ¬zb<d:`>JœŒzjˆœŒzhŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzf¨àzbˆz¨¤ªŠˆ¬zr`JœŒzjˆœŒzhŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzh¨àzbˆz¨¤ªŠˆ¬zp`JœŒzjˆœŒzhŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzj¨àzbˆz¨¤ªŠˆ¬zl`JœŒzjˆœŒzhŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzl¨àzbˆz¨¤ªŠˆ¬zh`JœŒzjˆœŒzhŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzn¨àzbˆz¨¤ªŠˆ¬zd`JœŒzjˆœŒzhŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º¶ÄÔ¨àzˆàzp¨àzbˆz¨¤ªŠˆ¬zbæœŒzhrˆœŒzblŠÜÆŒÚèz`ˆ¬˜Œzb¦ÎÜz`º

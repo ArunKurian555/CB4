@@ -1,0 +1,33 @@
+#SYMBOL_NAME "Retrive Event from NVRAM"
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+SIGNED_INTEGER nFileHandle;
+STRING_INPUT N[20];
+STRING_output I;
+Digital_Input Trigger;
+STRING sBuf[4096],fname[30],stringtemp[200];
+#HELP_BEGIN
+N - Name of the file
+I - String inside
+#HELP_END
+
+PUSH Trigger
+{
+StartFileOperations();
+makestring(fname,"\\NVRAM\\%s",N);
+nFileHandle=FileOpen(fname, _O_RDONLY | _O_TEXT);     
+IF (nFileHandle >= 0)
+{
+FileRead(nFileHandle,sBuf,4096);
+fileseek(nFileHandle,0,seek_set);
+makestring(I,"");
+I=sBuf;
+FileClose(nFileHandle);
+EndFileOperations();
+}
+}
+
+
+
+/*AK*/

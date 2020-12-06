@@ -1,0 +1,25 @@
+#SYMBOL_NAME "RGBIT_ColdBrew_CCVIT_V1.1"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Convert CCVI & Ramp Time Levels to Serial, Trimmed for ColdBrew
+#help_end
+
+/**** I/O Variables ****/
+DIGITAL_INPUT DMXenabled[120];
+STRING_INPUT Timee[255];
+ANALOG_INPUT Ii[120],Ci[120];
+STRING_OUTPUT TX;
+String Command[50];
+integer Grpi;
+/**** Functions ****/
+Change Ii,Ci
+{
+Grpi = GetLastModifiedArrayIndex();
+if(DMXenabled[Grpi]=1)
+{
+makestring(Command,"%03d,%03d,%03d,%02s",Grpi,Ii[Grpi],Ci[Grpi],Timee);
+TX = Command;
+}
+}
+

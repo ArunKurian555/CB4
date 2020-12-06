@@ -1,0 +1,46 @@
+#SYMBOL_NAME "RGBIT_ColdBrew_AK_V1.1"
+#DEFAULT_VOLATILE
+
+#help_begin
+	Convert RGBI & Ramp Time Levels to Serial, Trimmed for ColdBrew
+#help_end
+
+/**** I/O Variables ****/
+DIGITAL_INPUT Send,DMXenabled[120];
+ANALOG_INPUT Groupno,Intensity,Red,Green,Blue;
+STRING_INPUT Timee[255];
+ANALOG_INPUT Ii[120],Ri[120],Gi[120],Bi[120];
+STRING_OUTPUT TX;
+ANALOG_OUTPUT R[120],G[120],B[120];
+String Command[50];
+integer TrueIntensity,TrueIi,Grpi,i;
+/**** Functions ****/
+Change RED,Green,Blue 
+
+{
+for ( i =1 to 120 )
+{
+if ( Groupno = i )
+{
+R[i] = Red;
+G[i] = Green;
+B[i] = Blue;
+TrueIntensity= Ii[i];
+}
+}
+makestring(Command,"%03d,%03d,%03d,%03d,%03d,%02s",Groupno,TrueIntensity,Red,Green,Blue,Timee);
+TX = Command;	
+}
+
+
+Change Ii
+{
+Grpi = GetLastModifiedArrayIndex();
+if(DMXenabled[Grpi]=1)
+{
+TrueIi= Ii[Grpi];
+makestring(Command,"%03d,%03d,%03d,%03d,%03d,%02s",Grpi,TrueIi,Ri[Grpi],Gi[Grpi],Bi[Grpi],Timee);
+TX = Command;
+}
+}
+

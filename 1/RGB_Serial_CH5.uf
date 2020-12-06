@@ -1,8 +1,0 @@
-NEWVO 
-ANALOG_INPUTS ~R,~G,~B;
-STRING_OUTPUTS ~SERIAL;
-CHANGE ~R  CHANGE ~G  CHANGE ~B  
-{ 
-s" )" ~B ITOA s" ," ~G ITOA s" ," ~R ITOA s" rgb(" <p p" %s%s%s%s%s%s%s" p> ~SERIAL SYM_WR 
-} 
-SAVE" RGB_SE~1.UF" 
